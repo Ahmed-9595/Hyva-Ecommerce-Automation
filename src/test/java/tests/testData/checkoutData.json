@@ -1,0 +1,11 @@
+{
+    "emailAddress": "testuser@example.com",
+    "firstName": "ahmed",
+    "lastName": "abdelaziz",
+    "streetAddress": "123 Main Street",
+    "country": "United States",
+    "stateProvince": "California",
+    "city": "Los Angeles",
+    "zipPostalCode": "90001",
+    "phoneNumber": "1234567890"
+}

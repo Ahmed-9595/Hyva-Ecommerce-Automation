@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.revton.qa</groupId>
+    <artifactId>QA_Automation_Hyva</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <!-- WebDriverManager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.9.2</version>
+        </dependency>
+
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.28.1</version>
+        </dependency>
+
+        <!-- Allure TestNG -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.25.0</version>
+        </dependency>
+
+        <!-- TestNG -->
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Jackson for handling JSON test data -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.18.2</version>
+        </dependency>
+
+
+        <!--log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Allure Maven Plugin -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <reportVersion>2.14.0</reportVersion>
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
+                    <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire Report Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.2.3</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
