@@ -150,5 +150,3 @@ It follows best practices like the **Page Object Model (POM)** to ensure **maint
 
 ---
 
-💡 **For any questions or contributions, feel free to reach out!**
-
