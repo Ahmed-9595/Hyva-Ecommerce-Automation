@@ -3,7 +3,7 @@
 This is a **Selenium-based automation framework** for testing the purchasing flow on [Hyva Ecommerce](https://demo.hyva.io/).
 The framework is implemented using **Java, Selenium, Maven, Allure, and TestNG**.
 
-This README provides the necessary steps to **install, configure, and execute** the framework.
+This README provides the necessary steps  to **install, configure, and execute** the framework.
 
 ---
 
