@@ -7,7 +7,7 @@ This README provides the necessary steps to **install, configure, and execute** 
 
 ---
 
-## 💁 Project Structure
+##  Project Structure
 
 The project is organized as follows:
 
